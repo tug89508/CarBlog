@@ -1,0 +1,57 @@
+[
+    {
+        "webUserId": "6",
+        "userEmail": "tug89508@temple.edu",
+        "userPassword": "password",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/c/cd/Stick_Figure.jpg",
+        "birthday": "1999-02-18",
+        "membershipFee": "1.99",
+        "userRoleId": "0",
+        "userRoleType": "Admin",
+        "errorMsg": ""
+    },
+    {
+        "webUserId": "8",
+        "userEmail": "3@3.com",
+        "userPassword": "password",
+        "image": "",
+        "birthday": "",
+        "membershipFee": "",
+        "userRoleId": "1",
+        "userRoleType": "Moderator",
+        "errorMsg": ""
+    },
+    {
+        "webUserId": "5",
+        "userEmail": "1@1.com",
+        "userPassword": "password",
+        "image": "",
+        "birthday": "",
+        "membershipFee": "",
+        "userRoleId": "2",
+        "userRoleType": "User",
+        "errorMsg": ""
+    },
+    {
+        "webUserId": "7",
+        "userEmail": "2@2.com",
+        "userPassword": "password",
+        "image": "",
+        "birthday": "",
+        "membershipFee": "",
+        "userRoleId": "2",
+        "userRoleType": "User",
+        "errorMsg": ""
+    },
+    {
+        "webUserId": "9",
+        "userEmail": "4@4.com",
+        "userPassword": "password",
+        "image": "",
+        "birthday": "2000-08-08",
+        "membershipFee": "",
+        "userRoleId": "2",
+        "userRoleType": "User",
+        "errorMsg": ""
+    }
+]

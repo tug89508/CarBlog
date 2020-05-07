@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <!-- Use this type of comment within HTML -->
+        <title>Alex's Car Catalog</title>
+
+        <!-- Link to an External Style Sheet -->
+        <link href="style/style.css" rel="stylesheet" type="text/css" />  
+        <link href="style/dropdownStyle.css" rel="stylesheet" type="text/css" />
+        <link rel="shortcut icon" href="icons/favicon.ico" />
+        <link href="style/clickSort.css" rel="stylesheet" type="text/css" />  
+        <link href="style/slideShow.css" rel="stylesheet" type="text/css" />  
+        
+    </head>
+    <body>
+
+        <div id="titleNav">
+
+            <div id="pageTitle">
+                Alex's Car Catalog
+            </div>
+
+            <div id="nav">
+                <div class="dropdown">
+                    <a href="#/home"><img title="Home" src="icons/light/home_icon_H24.png" alt="Home"></a>
+                </div>
+                <div class="dropdown">
+                    <img class="dropHeader" title="Account" onclick="myDropdown.toggle(this)" src="icons/light/account_dd_icon_H24.png" alt="Account" >
+                    <div class="dropContent" id="accountDropDown">
+                        <!--
+                        Note: the logon links below need to be "registered" into the routing 
+                        table, JS files created, and JS functions written. 
+                        -->
+                        <a href="#/userInsert">Register</a> <br/>
+                        <a href="#/login">Log In</a> <br/>
+                        <a href="#/profile">Profile</a> <br/>
+                        <a href="#/logout">Log Out</a>
+                    </div> 
+                </div>
+                <div class="dropdown">
+                    <img class="dropHeader" title="Search" onclick="myDropdown.toggle(this)" src="icons/light/search_dd_icon_H24.png" alt="Search" >
+                    <div class="dropContent" id="searchDropDown">
+                        <a href="#/users">Users</a> <br/>
+                        <a href="#/cars">Cars</a> 
+                        <a href="#/slideshow">Slideshow</a> 
+                        
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <img class="dropHeader" title="Tutorial" onclick="myDropdown.toggle(this)" src="icons/light/tutorial_dd_icon_H24.png" alt="Account" >
+                    <div class="dropContent" id="tutorialDropDown">
+                        <a target="_blank" href='tutorial/proposal.pdf'>Proposal</a> <br/>
+                        <a target="_blank" href='tutorial/poc.html'>Proof Of Concept</a> <br/>    
+                        <a target="_blank" href='tutorial/index.html'>Demo</a> <br/>
+                        <a target="_blank" href='tutorial/log.html'>Log</a>
+                    </div> 
+                </div>          
+                <div class="dropdown">
+                    <a href="#/blog"><img  title="Blog" src="icons/light/blog_icon_H24.png" alt="Blog"></a>
+                </div>
+            </div>
+
+        </div>  <!-- end of titleNav -->
+
+        <div id="content">
+        </div> <!-- content (now in home.js) -->
+        
+        <div id="footer">
+            Alex St.Clair
+        </div>
+        
+        <script src="js/MakeTableBuilder.js"></script>
+        <script src="js/MakeSlideShow.js"></script>
+        <script src="js/MakeFilteredTable.js"></script>       
+        <script src="js/ajax.js"></script>  
+        <script src="js/dropdownFw.js"></script>
+        <script src="js/routeFw.js"></script>
+        <script src="js/components/blog.js"></script>
+        <script src="js/components/cars.js"></script>
+        <script src="js/components/home.js"></script>
+        <script src="js/components/users.js"></script>
+        <script src="js/components/slideShows.js"></script>
+        <script src="js/components/logon.js"></script>
+        <script src="js/components/profile.js"></script>
+        <script src="js/components/logoff.js"></script>
+        <script src="js/Utils.js"></script>
+        <script src="js/modalFw.js"></script>
+        <script src="js/CRUD_icons.js"></script>     
+
+        <script>
+                "use strict";
+                var myRoutes = [];
+
+                myRoutes['#/'] = home;  // page reload will run function home
+                myRoutes['#/home'] = home; // function home
+                myRoutes['#/cars'] = cars.display; // funtion cars.display
+                myRoutes['#/carInsert'] = cars.insertUI;
+                myRoutes['#/users'] = users.list; // function users.list
+                myRoutes['#/userInsert'] = users.insertUI; // public method of users object defined in users.js                    
+                myRoutes['#/slideshow'] = slideShows;
+                myRoutes['#/blog'] = blog; // function blog
+                myRoutes['#/login'] = logon.UI;
+                myRoutes['#/profile']= profile;
+                myRoutes['#/logout'] = logoff;
+                
+                myRoutes['#/userUpdate'] = function () {}; // do nothing -- the code will handle the UI
+                myRoutes['#/carUpdate'] = function () {}; // do nothing -- the code will handle the UI
+                
+                
+                // routeFw returns an object that has private and public 
+                // data members and methods. 
+                // As input parameter, it takes an object with properties you can set 
+                // or just accept whatever defaults are set by the framework.
+                var myRoutes = routeFw({
+                    routeArray: myRoutes,
+                    startingPath: '#/home',
+                    contentId: "content"
+                });
+
+                // print the routes (check console.log)
+                myRoutes.printRoutes();
+
+                var myDropdown = dropDownFw({
+                    dropContentStyle: "dropContent",
+                    hiddenRight: "-500px"
+                });
+
+                MakeTableBuilder("icons/sortUpDown16.png");
+        </script>
+    </body>
+</html>

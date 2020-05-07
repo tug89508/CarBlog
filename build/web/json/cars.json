@@ -1,0 +1,42 @@
+[
+    {
+        "carId": "2",
+        "carTitle": "1965 Ford Mustang",
+        "carImg": "pics/65mustang.jpg",
+        "carDesc": "",
+        "carPrice": "",
+        "carDate": "",
+        "webUserId": "6",
+        "webUserEmail": "tug89508@temple.edu"
+    },
+    {
+        "carId": "3",
+        "carTitle": "1994 Pontiac Grand Prix",
+        "carImg": "pics/94grandprix.jpg",
+        "carDesc": "This Grand Prix has a 3.1 liter v6 engine with a potential of 155HP",
+        "carPrice": "500.00",
+        "carDate": "2016-07-01",
+        "webUserId": "6",
+        "webUserEmail": "tug89508@temple.edu"
+    },
+    {
+        "carId": "4",
+        "carTitle": "2019 Lamborghini Aventador S Roadster",
+        "carImg": "pics/19lambo.jpg",
+        "carDesc": "",
+        "carPrice": "",
+        "carDate": "",
+        "webUserId": "6",
+        "webUserEmail": "tug89508@temple.edu"
+    },
+    {
+        "carId": "5",
+        "carTitle": "2018 Porsche 911",
+        "carImg": "pics/18porsche.jpg",
+        "carDesc": "",
+        "carPrice": "",
+        "carDate": "",
+        "webUserId": "6",
+        "webUserEmail": "tug89508@temple.edu"
+    }
+]
